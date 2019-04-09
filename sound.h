@@ -1,4 +1,5 @@
 // constants definition
+//#define DEBUG
 #define RATE 16000		// samples per second
 #define CMD "arecord -r16000 -c1 -f S16_LE -d1 -q test.wav"
 // data structures
