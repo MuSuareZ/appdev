@@ -2,8 +2,10 @@
 //#define DEBUG
 #define RATE 16000		// samples per second
 #define CMD "arecord -r16000 -c1 -f S16_LE -d1 -q test.wav"
+#define PI 3.1415926
 // data structures
-struct WAVHDR{
+struct WAVHDR
+{
 	char ChunkID[4];	// IT HAS TO BE "RIFF"
 	int ChunkSize;		// 4-byte number
 	char Format[4];		// it has to be "WAVE"
@@ -24,4 +26,4 @@ struct WAVHDR{
 // function declarations
 void displayWAVHDR(struct WAVHDR h);
 void displayWAVDATA(short []);
-// function definitions
+void testTone(int, int, float);
