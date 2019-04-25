@@ -59,7 +59,6 @@ In order to use this application, the user needs to install the libcurl library.
 Once the Raspberry PI is succesfully configured, proceed to the installation steps.
 	a. Copy the source code to your Raspberry PI by using the command "git clone https://github.com/MuSuareZ/appdev".
 	b. Make sure you have all the files succesfully copied to your directory (Check chapter 4. to ensure you have 11 files).
-	c. 
 
 3. Operating Instructions
 
@@ -84,7 +83,14 @@ Once you have succesfully completed the configuration and installation steps (st
 3.1 Debugging (Advanced Users Only)
 
 Please take note that these steps require a certain knowledge of programming and careful execution since the user will modify the source code lines.
-	a. 
+In case you need precise information for example the exact frequency value, this debugging can provide you that in order to fix a problem or report
+the problem to me.
+	a. Type "nano sound.h" to access the sound.h file and its code lines.
+	b. Once inside the code lines, you must uncomment the line "//#define DEBUG" by removing the "//" and save your file.
+		//#define DEBUG --> #define DEBUG
+	c. Type "make clean" to remove the files with the old configurations and type "make" to rebuild it.
+	d. Type "./sound.out" and you will see all the frequency values that the user's microphone is capturing.
+	e. In order to bring the sound bars back, the user just need to comment that line again and repeat the building steps (make clean -> make).
 
 4. File List (Manifest)
 
@@ -112,5 +118,5 @@ If you have any problems concerning the configuration, installation, bugs or dou
 7. Credits and Aknowledgements
 
 I would like to thank my teacher for all the orientations and lessons given during the design and execution of this project.
-Teacher and responsible for orienting, designing and creating the project Dr. Gao Chao.
+Teacher and responsible for orienting the project Dr. Gao Chao.
 Student and responsible for executing the project Murillo Suarez Figueiredo Nunes.
